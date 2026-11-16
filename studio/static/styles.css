@@ -164,7 +164,7 @@ details.card[open] > summary h3::before { transform: rotate(90deg) }
 .prompter-body { overflow-y: auto; padding: 28px max(20px, env(safe-area-inset-right, 0px)) 80px max(20px, env(safe-area-inset-left, 0px)) }
 .prompter-in { max-width: 34em; margin: 0 auto; font-size: calc(26px * var(--scale, 1)); line-height: 1.5 }
 .prompter-in .k { font: 500 14px var(--font-mono); color: #8fd6c8; letter-spacing: .06em; text-transform: uppercase }
-.prompter-in .hk { font-family: var(--font-display); font-weight: 700; font-size: 1.25em; line-height: 1.25; margin: 10px 0 18px; color: #fff }
+.prompter-in .hk { font-weight: 700; margin: 0 0 .8em; color: #fff }
 .prompter-in p { margin: 0 0 .8em }
 .prompter-in ul, .prompter-in ol { padding-left: 1.2em }
 .prompter-in .jt { margin-top: 1em; padding: .5em .8em; border-left: 4px solid #4dbcaa; color: #cfeee8 }

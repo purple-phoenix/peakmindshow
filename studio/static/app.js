@@ -297,7 +297,7 @@
             </span></div>
           ${b.hook ? `<p class="hook">${esc(b.hook)}</p>` : ""}
           <div class="rich">${rich(b.body)}</div>
-          ${b.handoff ? `<div class="handoff"><b>→ JT</b> ${inline(esc(b.handoff))}</div>` : ""}
+          ${b.handoff ? `<div class="handoff">${inline(esc(b.handoff))}</div>` : ""}
         </article>`).join("")}
       ${S.editing === "beat:new" ? beatForm({ id: "new", kicker: "", title: "", hook: "", body: "", handoff: "" }) : w ? `<div><button class="btn" data-act="edit" data-key="beat:new">+ Add a beat</button></div>` : ""}
     </div>`;
@@ -374,13 +374,12 @@
   function renderPrompter() {
     const e = ep(); if (!e || S.prompter == null) return;
     const beats = e.beats || []; const i = Math.max(0, Math.min(S.prompter, beats.length - 1)); S.prompter = i; const b = beats[i];
-    $prompter.innerHTML = `<div class="prompter-bar"><button class="btn sm" data-p="close">Close</button><span class="meta">${i + 1} / ${beats.length}</span><span style="flex:1"></span>
+    $prompter.innerHTML = `<div class="prompter-bar"><button class="btn sm" data-p="close">Close</button><span class="meta">${i + 1} / ${beats.length} · ${esc(b.kicker || "Beat " + (i + 1))}</span><span style="flex:1"></span>
         <button class="btn sm" data-p="smaller" aria-label="Smaller text">A−</button><button class="btn sm" data-p="bigger" aria-label="Bigger text">A+</button></div>
       <div class="prompter-body" id="pb"><div class="prompter-in" style="--scale:${S.scale}">
-        <div class="k">${esc(b.kicker || "Beat " + (i + 1))} · ${esc(b.title)}</div>
         ${b.hook ? `<div class="hk">${esc(b.hook)}</div>` : ""}
         <div>${rich(b.body)}</div>
-        ${b.handoff ? `<div class="jt">→ JT: ${inline(esc(b.handoff))}</div>` : ""}
+        ${b.handoff ? `<div class="jt">${inline(esc(b.handoff))}</div>` : ""}
       </div></div>
       <div class="prompter-nav"><button class="btn" data-p="prev" ${i === 0 ? "disabled" : ""}>← Previous</button><button class="btn primary" data-p="next" ${i === beats.length - 1 ? "disabled" : ""}>Next →</button></div>`;
     const pb = document.getElementById("pb"); if (pb) pb.scrollTop = 0;

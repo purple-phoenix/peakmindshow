@@ -51,7 +51,7 @@ Then, separately, configure Tailscale Serve:
 tailscale serve --bg --https=5480 http://127.0.0.1:5480
 ```
 
-Open `https://<machine>.<tailnet>.ts.net:5480/` from a phone or Mac on the tailnet. Never expose it through Funnel, a public reverse proxy, or a non-loopback bind. When moving to the Mac mini, copy the private data and media directories separately, update config paths and people lists, then install there. Stop the old service before using the new copy as the source of truth.
+Open `https://<machine>.<tailnet>.ts.net:5480/` from a phone or Mac on the tailnet. Never expose it through Funnel, a public reverse proxy, or a non-loopback bind. Studio runs on the Mac mini (moved 2026-11-16) at <https://matts-mac-mini.tailebcf61.ts.net:5480/>, because the mini never sleeps. The MacBook's copy is stopped and kept as a backup; its launch agent was renamed to `com.peakmind.studio.plist.moved-to-mini`. To move again, copy the private data and media directories separately, update config paths and people lists, install on the new machine, and stop the old service before treating the new copy as the source of truth.
 
 ## Data, versions, and backups
 

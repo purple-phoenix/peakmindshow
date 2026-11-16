@@ -6,6 +6,6 @@ The website for Peak Mind, the weekly show with JT McCarthy and Matt McCarthy.
 - Pushing to `main` deploys it to GitHub Pages (`.github/workflows/deploy.yml`).
 - The domain is registered at Cloudflare. DNS for `peakmindshow.com` and `www` points at GitHub Pages.
 - The episode list comes from the Spotify show embed, so new episodes appear without changing this repo.
-- Artwork comes from the Peak Mind show cover (Ascending Gate). Sources: `~/Downloads/peak-mind-spotify/show-cover/` and `social-profile/` on Matt's MacBook.
+- Artwork comes from the Peak Mind show cover (Ascending Gate). Sources: `~/Downloads/peak-mind-spotify/show-cover/` and `social-profile/` on the Mac mini (copied from Matt's MacBook on 2026-11-16).
 - `studio/` holds Peak Mind Studio, a local tool for show prep and episode approval. It is not part of the website and is never deployed (see `studio/README.md`).
 - `scripts/preview-pr.sh <pr-number>` serves a pull request's version of the site on the tailnet so it can be checked before merging.
